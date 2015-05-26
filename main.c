@@ -34,6 +34,7 @@ typedef struct
 void bitSet(int a, MYPORT *p1);
 void bitClr(int b, MYPORT *p2);
 void bitToggle(int c, MYPORT *p3);
+unsigned int bitGet(int d, MYPORT *p4);
 
 
 int main(int argc, char** argv) {
@@ -52,7 +53,8 @@ portD.LS = portB;
 portD.MS = portA;
 
 bitSet(4,pA);
-printf("%d",portA.bit4);
+printf("%d\n",portA.bit4);
+printf("%d\n",bitGet(4,pA));
 
     return (EXIT_SUCCESS);
 }
@@ -82,25 +84,25 @@ void bitSet(int a, MYPORT *p1)
     }
 }
 
-void bitClr(int b, MYPORT *p1)
+void bitClr(int b, MYPORT *p2)
 {
     switch (b)
     {
-        case 0:    p1->bit0=0; 
+        case 0:    p2->bit0=0; 
             break;
-        case 1:    p1->bit1=0;
+        case 1:    p2->bit1=0;
             break;
-        case 2:    p1->bit2=0; 
+        case 2:    p2->bit2=0; 
             break;
-        case 3:    p1->bit3=0;
+        case 3:    p2->bit3=0;
             break;
-        case 4:    p1->bit4=0;
+        case 4:    p2->bit4=0;
             break;
-        case 5:    p1->bit5=0;
+        case 5:    p2->bit5=0;
             break;
-        case 6:    p1->bit6=0;
+        case 6:    p2->bit6=0;
             break;
-        case 7:    p1->bit7=0;
+        case 7:    p2->bit7=0;
             break;
         default: printf("Bit no valido\n");
             break;
@@ -154,4 +156,29 @@ void bitToggle(int c, MYPORT *p3)
         default: printf("Bit no valido\n");
             break;
     }
+}
+
+unsigned int bitGet(int d, MYPORT *p4)
+{
+    switch (d)
+    {
+        case 0:    return(p4->bit0); 
+            break;
+        case 1:    return(p4->bit1); 
+            break;
+        case 2:    return(p4->bit2); 
+            break;
+        case 3:    return(p4->bit3); 
+            break;
+        case 4:    return(p4->bit4); 
+            break;
+        case 5:    return(p4->bit5); 
+            break;
+        case 6:    return(p4->bit6); 
+            break;
+        case 7:    return(p4->bit7); 
+            break;
+        default: printf("Bit no valido\n");
+            break;
+    }    
 }
