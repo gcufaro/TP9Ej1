@@ -59,21 +59,21 @@ void bitSet(int a, MYPORT *p1)
 {
     switch (a)
     {
-        case 0:    (*p1).bit0=1; 
+        case 0:    p1->bit0=1; 
             break;
-        case 1:    (*p1).bit1=1; 
+        case 1:    p1->bit1=1;
             break;
-        case 2:    (*p1).bit2=1; 
+        case 2:    p1->bit2=1; 
             break;
-        case 3:    (*p1).bit3=1; 
+        case 3:    p1->bit3=1;
             break;
-        case 4:    (*p1).bit4=1; 
+        case 4:    p1->bit4=1;
             break;
-        case 5:    (*p1).bit5=1; 
+        case 5:    p1->bit5=1;
             break;
-        case 6:    (*p1).bit6=1; 
+        case 6:    p1->bit6=1;
             break;
-        case 7:    (*p1).bit7=1; 
+        case 7:    p1->bit7=1;
             break;
         default: printf("Bit no valido\n");
             break;
