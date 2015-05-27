@@ -35,6 +35,8 @@ void bitSet(int a, MYPORT *p1);
 void bitClr(int b, MYPORT *p2);
 void bitToggle(int c, MYPORT *p3);
 unsigned int bitGet(int d, MYPORT *p4);
+void maskOn(char mask, MYPORT *p5);
+void maskOff(MYPORT *p6);
 
 
 int main(int argc, char** argv) {
@@ -181,4 +183,21 @@ unsigned int bitGet(int d, MYPORT *p4)
         default: printf("Bit no valido\n");
             break;
     }    
+}
+
+// Función que carga una máscara en MYPORT//
+
+void maskOn(char mask, MYPORT *p5)
+{
+
+	backup=*p5;	//guardo el estado del puerto en un backup
+	*p5=mask;
+}
+
+
+// Función que vuelve a poner al puerto como estaba, antes de cargar la máscara//
+
+void maskOff(MYPORT *p6)
+{
+	*p6=backup;	//recupero el estado del puerto que tenia antes de la maskOn
 }
