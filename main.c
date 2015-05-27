@@ -37,6 +37,7 @@ void bitToggle(int c, MYPORT *p3);
 unsigned int bitGet(int d, MYPORT *p4);
 void maskOn(char mask, MYPORT *p5);
 void maskOff(MYPORT *p6);
+MYPORT backup;
 
 
 int main(int argc, char** argv) {
