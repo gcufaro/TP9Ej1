@@ -8,16 +8,25 @@
 #ifndef FUNP_H
 #define	FUNP_H
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
+
+void bitSet(int a, MYPORT *p1);
 
 
+void bitClr(int b, MYPORT *p2);
 
 
-#ifdef	__cplusplus
-}
-#endif
+void bitToggle(int c, MYPORT *p3);
+
+
+unsigned int bitGet(int d, MYPORT *p4);
+
+// Función que carga una máscara en MYPORT//
+
+void maskOn(char mask, MYPORT *p5);
+
+// Función que vuelve a poner al puerto como estaba, antes de cargar la máscara//
+
+void maskOff(MYPORT *p6);
 
 #endif	/* FUNP_H */
 
