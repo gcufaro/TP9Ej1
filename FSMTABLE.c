@@ -76,5 +76,4 @@ STATE estado_menuB[]=
     static void menu_abd(void)
 {   
         printf("Centro de Puertos\nIngrese:\n'a' para puerto A\n'b' para puerto B\n'd' para puerto D\n");
-
-
+    }
