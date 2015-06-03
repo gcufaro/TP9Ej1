@@ -1,17 +1,20 @@
 /////////////////////////
 //Funciones de Puertos
 /////////////////////////
-    
+#include<stdio.h>
+#include"myport.h"
+
+void bitSet(int a, MYPORT *p1);
+void bitClr(int b, MYPORT *p2);
+void bitToggle(int c, MYPORT *p3);
+unsigned int bitGet(int d, MYPORT *p4);
+void maskOn(char maskon, MYPORT *p5);
+void maskOff(char maskoff, MYPORT *p6);
 
 
 
 
-
-
-
-
-
-    void bitSet(int a, MYPORT *p1)
+void bitSet(int a, MYPORT *p1)
 {
     switch (a)
     {
@@ -137,18 +140,51 @@ unsigned int bitGet(int d, MYPORT *p4)
 
 // Función que carga una máscara en MYPORT//
 
-void maskOn(char mask, MYPORT *p5)
-{
 
-	backup=*p5;	//guardo el estado del puerto en un backup
-	*p5=mask;
+void maskOn(char maskon, MYPORT *p5)
+{
+    if(128&maskon)
+        p5->bit7=1;
+    if(64&maskon)
+        p5->bit6=1;
+    if(32&maskon)
+        p5->bit5=1;
+    if(16&maskon)
+        p5->bit4=1;
+    if(8&maskon)
+        p5->bit3=1;
+    if(4&maskon)
+        p5->bit2=1;
+    if(2&maskon)
+        p5->bit1=1;
+    if(1&maskon)
+        p5->bit0=1;
+    
+    
 }
 
 
-// Función que vuelve a poner al puerto como estaba, antes de cargar la máscara//
 
-void maskOff(MYPORT *p6)
+void maskOff(char maskoff, MYPORT *p6)
 {
-	*p6=backup;	//recupero el estado del puerto que tenia antes de la maskOn
+    
+    if(128&maskoff)
+        p6->bit7=0;
+    if(64&maskoff)
+        p6->bit6=0;
+    if(32&maskoff)
+        p6->bit5=0;
+    if(16&maskoff)
+        p6->bit4=0;
+    if(8&maskoff)
+        p6->bit3=0;
+    if(4&maskoff)
+        p6->bit2=0;
+    if(2&maskoff)
+        p6->bit1=0;
+    if(1&maskoff)
+        p6->bit0=0;
+   
 }
+
 

@@ -35,11 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/FSM.o \
-	${OBJECTDIR}/FSMTABLE.o \
 	${OBJECTDIR}/funp.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/ppal.o \
+	${OBJECTDIR}/myport.o \
 	${OBJECTDIR}/termlib.o
 
 
@@ -67,16 +65,6 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tp9ej1: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tp9ej1 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/FSM.o: FSM.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FSM.o FSM.c
-
-${OBJECTDIR}/FSMTABLE.o: FSMTABLE.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FSMTABLE.o FSMTABLE.c
-
 ${OBJECTDIR}/funp.o: funp.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -87,10 +75,10 @@ ${OBJECTDIR}/main.o: main.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
 
-${OBJECTDIR}/ppal.o: ppal.c 
+${OBJECTDIR}/myport.o: myport.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ppal.o ppal.c
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/myport.o myport.c
 
 ${OBJECTDIR}/termlib.o: termlib.c 
 	${MKDIR} -p ${OBJECTDIR}

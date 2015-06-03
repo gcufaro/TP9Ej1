@@ -4,9 +4,8 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>FSM.h</itemPath>
-      <itemPath>FSMTABLE.h</itemPath>
       <itemPath>funp.h</itemPath>
+      <itemPath>myport.h</itemPath>
       <itemPath>termlib.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -16,11 +15,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>FSM.c</itemPath>
-      <itemPath>FSMTABLE.c</itemPath>
       <itemPath>funp.c</itemPath>
       <itemPath>main.c</itemPath>
-      <itemPath>ppal.c</itemPath>
+      <itemPath>myport.c</itemPath>
       <itemPath>termlib.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -45,21 +42,15 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="FSM.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="FSM.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="FSMTABLE.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="FSMTABLE.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="funp.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="funp.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="ppal.c" ex="false" tool="0" flavor2="0">
+      <item path="myport.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="myport.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="termlib.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -86,21 +77,15 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="FSM.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="FSM.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="FSMTABLE.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="FSMTABLE.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="funp.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="funp.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="ppal.c" ex="false" tool="0" flavor2="0">
+      <item path="myport.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="myport.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="termlib.c" ex="false" tool="0" flavor2="0">
       </item>

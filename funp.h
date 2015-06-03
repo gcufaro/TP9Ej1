@@ -22,11 +22,11 @@ unsigned int bitGet(int d, MYPORT *p4);
 
 // Función que carga una máscara en MYPORT//
 
-void maskOn(char mask, MYPORT *p5);
+void maskOn(char maskon, MYPORT *p5);
 
 // Función que vuelve a poner al puerto como estaba, antes de cargar la máscara//
 
-void maskOff(MYPORT *p6);
+void maskOff(char maskoff, MYPORT *p6);
 
 #endif	/* FUNP_H */
 
